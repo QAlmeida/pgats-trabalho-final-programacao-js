@@ -21,13 +21,9 @@ jobs:
 
       # Instala dependências declaradas no package.json
       - name: Instalar dependências
-        run: |
-          cd pgats-trabalho-final-programacao-js
-          npm install     
+        run: npm install     
 
       # Executa os testes
       - name: Executando os testes
-        run: |
-          cd pgats-trabalho-final-programacao-js
-          npm test
+        run: npm test
 
