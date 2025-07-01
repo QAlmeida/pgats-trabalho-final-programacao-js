@@ -1,22 +1,29 @@
 # CI de Nível 01 - Disparo manual a partir de 1 clique
 
-# nome do 'pipeline'
 name: 'Execução N1'
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: 
 
-# trabalhos/tarefas dentro do pipeline = jobs
+
 jobs:
-  unidade:
+  unit-tests:
     runs-on: ubuntu-latest
 
     steps:
+      # Baixa o código do repo
       - uses: actions/checkout@v4
 
-      - name: Instalando o Mocha
-        run: npm install -D mocha
+      # Instala o Node.js
+      - uses: actions/setup-node@v4 
+        with:
+          node-version: 20   
 
+      # Instala dependências declaradas no package.json
+      - name: Instalar dependências
+        run: npm ci      
+
+      # Executa os testes
       - name: Executando os testes
-        run: npx mocha pgats-trabalho-final-programacao-js/trabalho-final.js
+        run: npm test
 

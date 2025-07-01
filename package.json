@@ -1,0 +1,11 @@
+{
+  "name": "pgats-trabalho-final",
+  "version": "1.0.0",
+  "type": "module",                // garante que o Node aceite 'import ...'
+  "scripts": {
+    "test": "mocha pgats-trabalho-final-programacao-js/trabalho-final.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.5.0"
+  }
+}
