@@ -10,10 +10,6 @@ jobs:
   unit-tests:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: pgats-trabalho-final-programacao-js
-
     steps:
       # Baixa o código do repo
       - uses: actions/checkout@v4
@@ -25,9 +21,13 @@ jobs:
 
       # Instala dependências declaradas no package.json
       - name: Instalar dependências
-        run: npm install     
+        run: |
+          cd pgats-trabalho-final-programacao-js
+          npm install     
 
       # Executa os testes
       - name: Executando os testes
-        run: npm test
+        run: |
+          cd pgats-trabalho-final-programacao-js
+          npm test
 
