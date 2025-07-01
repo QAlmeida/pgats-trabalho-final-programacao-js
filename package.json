@@ -1,0 +1,11 @@
+{
+  "name": "pgats-trabalho-final",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "mocha pgats-trabalho-final-programacao-js/trabalho-final.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.5.0"
+  }
+}
