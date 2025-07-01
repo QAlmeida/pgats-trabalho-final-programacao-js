@@ -1,0 +1,22 @@
+# CI de Nível 01 - Disparo manual a partir de 1 clique
+
+# nome do 'pipeline'
+name: 'Execução N1'
+
+on:
+  workflow_dispatch:
+
+# trabalhos/tarefas dentro do pipeline = jobs
+jobs:
+  unidade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando o Mocha
+        run: npm install -D mocha
+
+      - name: Executando os testes
+        run: npx mocha pgats-trabalho-final-programacao-js/trabalho-final.js
+
