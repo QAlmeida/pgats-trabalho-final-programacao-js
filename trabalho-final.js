@@ -6,7 +6,7 @@ import {
   calcularConsumoDeRacao,
   decidirTipoDeAtividadePorPorte,
   buscarDadoAsync
-} from '../trabalho.js';
+} from '../pgats-trabalho-final-programacao-js/funcoes.js';
 
 describe('Testes da disciplina - fundamentos JS', () => {
   
