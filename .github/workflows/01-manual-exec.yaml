@@ -21,7 +21,7 @@ jobs:
 
       # Instala dependências declaradas no package.json
       - name: Instalar dependências
-        run: npm ci      
+        run: npm install     
 
       # Executa os testes
       - name: Executando os testes
